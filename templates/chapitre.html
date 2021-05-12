@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Learningl</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <h1 style="text-align: center; padding-bottom: 150px;">Les chapitre du cours {{ cours.titre }}</h1>
+
+    <div class="congtainer" style="text-align: center;">
+        <ul class="list-group">
+            
+            {% for chapitre in chapitres %}
+            <li class="list-group-item"><a href="{% url 'detailchapitre' chapitre.slug %}">{{ chapitre.titre }}</a></li>
+            {% endfor %}
+                
+        
+        </ul>
+    </div>
+    
+</body>
+</html>
